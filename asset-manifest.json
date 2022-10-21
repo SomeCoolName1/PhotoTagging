@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/PhotoTagging/static/css/main.f5c0a66f.css",
+    "main.js": "/PhotoTagging/static/js/main.c6f2e740.js",
+    "static/media/uma_font.otf": "/PhotoTagging/static/media/uma_font.ce10c6d95881f8767d7d.otf",
+    "static/media/Game_6.jpeg": "/PhotoTagging/static/media/Game_6.42095a930a556a7d6096.jpeg",
+    "static/media/Game_3.jpeg": "/PhotoTagging/static/media/Game_3.06b06d7288dbdd412c0a.jpeg",
+    "static/media/Game_1.jpeg": "/PhotoTagging/static/media/Game_1.891aa044181d8662263e.jpeg",
+    "static/media/Game_4.jpeg": "/PhotoTagging/static/media/Game_4.0f3abf156a1e006ebb55.jpeg",
+    "static/media/Game_5.jpeg": "/PhotoTagging/static/media/Game_5.7044367a2b33a592819f.jpeg",
+    "static/media/Game_2.jpeg": "/PhotoTagging/static/media/Game_2.585251b4f7a9fbe50d0e.jpeg",
+    "static/media/fireworks.gif": "/PhotoTagging/static/media/fireworks.88f6c793aad38165557f.gif",
+    "static/media/Wizard.png": "/PhotoTagging/static/media/Wizard.64d9c3b4767523d21aae.png",
+    "static/media/Waldo.png": "/PhotoTagging/static/media/Waldo.962239de83886824354b.png",
+    "static/media/Odlaw.png": "/PhotoTagging/static/media/Odlaw.dda0f65c4c7d0bffc9b7.png",
+    "static/media/Wenda.png": "/PhotoTagging/static/media/Wenda.be6a6a8c4fd2d927eaaf.png",
+    "static/media/Woof.png": "/PhotoTagging/static/media/Woof.f1fde8ed67806a21d885.png",
+    "index.html": "/PhotoTagging/index.html",
+    "main.f5c0a66f.css.map": "/PhotoTagging/static/css/main.f5c0a66f.css.map",
+    "main.c6f2e740.js.map": "/PhotoTagging/static/js/main.c6f2e740.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.f5c0a66f.css",
+    "static/js/main.c6f2e740.js"
+  ]
+}
