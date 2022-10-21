@@ -1,0 +1,42 @@
+.ImageContainer {
+  width: 100%;
+  overflow-x: scroll;
+  position: relative;
+}
+
+#formOverlay {
+  background: black;
+  z-index: 100;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  color: white;
+  display: none;
+
+  .inputForm > * {
+    margin-top: 1rem;
+  }
+  .inputForm {
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+#fireworksGifLeft {
+  display: none;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  height: 50%;
+}
+
+#fireworksGifRight {
+  display: none;
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  height: 50%;
+}

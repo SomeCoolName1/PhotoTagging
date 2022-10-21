@@ -1,0 +1,14 @@
+@font-face {
+  font-family: "Uma Font";
+  src: url("/src/assets/fonts/uma_font.otf");
+}
+
+* {
+  font-family: "Uma Font";
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}

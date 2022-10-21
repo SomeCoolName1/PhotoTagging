@@ -1,0 +1,30 @@
+.dropDownContainer {
+  display: flex;
+  visibility: hidden;
+  flex-direction: column;
+  background-color: rgb(12, 12, 12);
+  height: fit-content;
+  color: white;
+}
+
+.characterContainer {
+  display: flex;
+  flex-direction: row;
+  padding-left: 1rem;
+  width: 150px;
+  align-items: center;
+
+  img {
+    height: 45px;
+    width: 25px;
+  }
+
+  p {
+    font-size: small;
+    padding-left: 1rem;
+  }
+
+  &:hover {
+    background-color: rgb(83, 83, 83);
+  }
+}
