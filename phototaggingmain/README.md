@@ -18,4 +18,4 @@ The main focus of this project is the incorporation of FireBase to store game da
 
 **Demo GIF**
 
-<img src="./livedemo.gif" width="200px">
+<img src="./livedemo.gif">
