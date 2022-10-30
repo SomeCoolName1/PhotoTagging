@@ -17,4 +17,5 @@ The main focus of this project is the incorporation of FireBase to store game da
 - Global leaderboard for all game boards that updates in realtime through a firebase-firestore back end database.
 
 **Demo GIF**
-![PhotoTagging Gif](https://imgur.com/T8AYOv3)
+
+<img src="./livedemo.gif" width="200px">
