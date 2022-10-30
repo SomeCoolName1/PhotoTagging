@@ -1,4 +1,5 @@
-import { useState } from "react";
+import { useState, useRef } from "react";
+import { useDraggable } from "react-use-draggable-scroll";
 import "./GameBoard.scss";
 import CharacterDropDown from "./GameData/CharacterDropdown";
 import fireWorks from "../assets/fireworks/fireworks.gif";
@@ -6,6 +7,8 @@ import SubmitEntry from "./Firebase/SubmitEntry";
 import { useNavigate } from "react-router-dom";
 
 const GameBoard = ({ level, setGame, timer }) => {
+  const ref = useRef();
+  const { events } = useDraggable(ref);
   const board = level.board;
   const characterList = level.characters;
   const navigate = useNavigate();
@@ -88,7 +91,9 @@ const GameBoard = ({ level, setGame, timer }) => {
     e.preventDefault();
 
     const getNameInput = document.getElementById("nameInput").value;
-    SubmitEntry(getNameInput, timer);
+
+    SubmitEntry(getNameInput, timer, level.name);
+
     navigate("/leaderboard");
   }
 
@@ -109,15 +114,30 @@ const GameBoard = ({ level, setGame, timer }) => {
           <input type="submit" />
         </form>
       </div>
-      <div className="ImageContainer" onClick={() => dropDownToggle()}>
+      <div
+        className="ImageContainer"
+        {...events}
+        ref={ref}
+        onClick={() => dropDownToggle()}
+      >
         <CharacterDropDown
           clickLocation={menuCoords}
           characterList={characters}
           checkCoords={checkCoordsOnClick}
         />
-        <img src={board} id="boardImage" onClick={getClick} />
-        <img src={fireWorks} id="fireworksGifLeft" className="fireworksGif" />
-        <img src={fireWorks} id="fireworksGifRight" className="fireworksGif" />
+        <img src={board} id="boardImage" onClick={getClick} alt="board" />
+        <img
+          src={fireWorks}
+          id="fireworksGifLeft"
+          className="fireworksGif"
+          alt="fireworksGif"
+        />
+        <img
+          src={fireWorks}
+          id="fireworksGifRight"
+          className="fireworksGif"
+          alt="fireworksGif"
+        />
       </div>
     </div>
   );

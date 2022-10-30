@@ -8,7 +8,6 @@ $base-color: rgb(12, 12, 12);
   color: white;
   position: sticky;
   z-index: 200;
-
   top: 0px;
   height: 2vh;
   padding: 3vh;
@@ -17,6 +16,16 @@ $base-color: rgb(12, 12, 12);
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
+  font-size: 1em;
+}
+
+.rightSide {
+  display: flex;
+  padding: 1em;
+
+  > * {
+    padding-left: 1em;
+  }
 }
 
 .MainContainer {

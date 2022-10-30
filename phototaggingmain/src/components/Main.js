@@ -4,7 +4,6 @@ import { LevelData } from "./GameData/LevelData";
 
 const Main = ({ setLevel }) => {
   const levelBoards = LevelData.map((game) => {
-    const level = game.level;
     const board = game.board;
     const name = game.name;
     return (

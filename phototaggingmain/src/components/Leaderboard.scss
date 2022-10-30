@@ -1,13 +1,26 @@
 .LeaderboardContainer {
   display: flex;
   justify-content: center;
-  align-items: center;
   background-color: rgb(12, 12, 12);
   color: white;
   width: 100%;
   height: 94vh;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  font-size: medium;
 }
 
-.LeaderboardContainer table {
-  width: 20%;
+.leaderList {
+  text-align: center;
+  width: 30%;
+  height: auto;
+
+  table {
+    margin: 0 auto;
+    width: 100%;
+    text-align: center;
+    th {
+      width: 50%;
+    }
+  }
 }

@@ -1,48 +1,35 @@
-import db from "./Firebase/firebase";
-import {
-  getFirestore,
-  collection,
-  getDocs,
-  doc,
-} from "firebase/firestore/lite";
+import store from "..";
 import "./Leaderboard.scss";
-import { useEffect, useState } from "react";
-import { async } from "@firebase/util";
 
 const Leaderboard = () => {
-  const [leaders, setLeaderList] = useState([]);
+  let leaderList;
+  const getLeaderboards = store.getState().leaderboard;
 
-  useEffect(() => {
-    const fetchLeaderboard = async () => {
-      const leaderCollection = collection(db, "Leaderboard");
-      const leaderSnapshot = await getDocs(leaderCollection);
-      const leaderList = leaderSnapshot.docs.map((doc) => doc.data());
-      setLeaderList(leaderList);
-    };
-    fetchLeaderboard();
-  }, []);
+  leaderList = getLeaderboards;
 
-  const sortRankings = () => {
-    leaders.sort((a, b) => a.Time - b.Time);
-  };
-
-  sortRankings();
   return (
     <div className="LeaderboardContainer">
-      <table>
-        <tr style={{ color: "red" }}>
-          <th>Name</th>
-          <th>Time (s)</th>
-        </tr>
-        {leaders.slice(0, 10).map((entry) => {
-          return (
-            <tr>
-              <th>{entry.Name}</th>
-              <th>{entry.Time}</th>
-            </tr>
-          );
-        })}
-      </table>
+      {leaderList.map((board) => (
+        <div className="leaderList">
+          <h4>{board.name}</h4>
+          <table>
+            <thead style={{ color: "red" }}>
+              <th>Name</th>
+              <th>Time (s)</th>
+            </thead>
+            {board.leaders === undefined
+              ? ""
+              : board.leaders.slice(0, 10).map((entry) => {
+                  return (
+                    <tbody>
+                      <th>{entry.Name}</th>
+                      <th>{entry.Time}</th>
+                    </tbody>
+                  );
+                })}
+          </table>
+        </div>
+      ))}
     </div>
   );
 };
