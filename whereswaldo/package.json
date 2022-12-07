@@ -1,7 +1,7 @@
 {
-  "name": "phototaggingmain",
+  "name": "Where's Waldo",
   "version": "0.1.0",
-  "homepage": "https://somecoolname1.github.io/PhotoTagging",
+  "homepage": ".",
   "private": true,
   "dependencies": {
     "@reduxjs/toolkit": "^1.8.6",
